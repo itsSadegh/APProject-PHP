@@ -1,0 +1,74 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(90, 13, 13);
+  color: rgb(12, 12, 78)
+}
+
+.addedProductContainer{
+  width: 80%;  
+  margin: 100px auto;
+}
+
+.cart{
+  width: 90vw;
+  margin: 30px auto; 
+}
+  
+.cart table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-top: 20px;
+  background-color: white;
+
+}
+
+.cart table tbody tr td img {
+  width: 100px;
+}
+
+.cart table thead tr th{
+  background-color: rgb(195, 195, 195);
+  padding: 20px;
+}
+
+.cart table thead tr th,
+.cart table tbody tr td{
+  color: rgb(12, 12, 78);
+}
+
+
+.cart table tbody tr td{
+  background-color: white;
+  color: #909090;
+  border-bottom: 0.3px solid #909090;
+  padding: 20px;
+  text-align: center;
+}
+
+.backToMainPageLink{
+  text-decoration: none;
+  color: rgb(12, 12, 78);
+  background-color: rgb(221, 221, 221);
+  border-radius: 20px;
+  padding: 12px;
+  font-size: 12px;
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+
+}
+
+.btn{
+  background-color: rgb(221, 221, 221);
+  border-radius: 20px;
+  border: 1px solid rgb(12, 12, 78);
+  padding: 12px;
+  color: rgb(12, 12, 78);
+  font-size: 12px;
+}
