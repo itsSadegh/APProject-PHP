@@ -104,7 +104,7 @@ $manager = new ProductManager("productsAP.xlsx");
 <div class="products grid">
     <?php foreach ($products as $key => $product) { ?>
         <div class="card col-3">
-            <img src="assets/img/12 Pro Max .jpg" alt="">
+            <img src="assets/img/<?= $product->getimgAddress() ?>" alt="">
             <p type></p>
             <p><?= $product->getName() ?></p>
             <p><?= $product->getBrand() ?></p>
