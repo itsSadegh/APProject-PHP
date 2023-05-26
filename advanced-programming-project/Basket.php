@@ -36,7 +36,10 @@ if (isset($_POST["add_to_basket"])) {
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($_SESSION["basket"] as $product) { ?>
+                <?php 
+                foreach ($_SESSION["basket"] as $product) { 
+                $total_cost += $product["price"];
+                ?>
                     <tr>
                         <td><img src="assets/img/12 Pro Max .jpg" alt=""></td>
                         <td><?= $product["name"] ?></td>
@@ -52,6 +55,11 @@ if (isset($_POST["add_to_basket"])) {
                         </td>
                     </tr>
                 <?php } ?>
+                    <tr>
+                        <td><p> total cost: </p></td>
+                        <td><?= $total_cost ?></td>
+                    </tr>
+                
             </tbody>
         </table>
     </div>

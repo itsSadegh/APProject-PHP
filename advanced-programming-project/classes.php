@@ -11,11 +11,15 @@ class Product {
     private $name; 
     private $brand; 
     private $price; 
+    private $imgAddress;
 
-    public function __construct($name, $brand, $price) { 
+
+    public function __construct($name, $brand, $price, $imgAddress) { 
         $this->name = $name; 
         $this->brand = $brand; 
         $this->price = $price; 
+        $this->imgAddress = $imgAddress; 
+
     } 
 
  
@@ -29,6 +33,9 @@ class Product {
 
     public function getPrice() { 
         return $this->price; 
+    } 
+    public function getimgAddress() { 
+        return $this->imgAddress; 
     } 
 
  
@@ -61,7 +68,7 @@ class ProductManager {
         // Read the product data from the spreadsheet and populate the $products array 
         $rows = $worksheet->toArray();
         foreach ($rows as $row) {
-            $product = new Product($row[0], $row[1], $row[2]);
+            $product = new Product($row[0], $row[1], $row[2], $row[3]);
             $this->products[] = $product;
         }
     } 
@@ -73,6 +80,7 @@ class ProductManager {
         $this->spreadsheet->getActiveSheet()->setCellValue("A$row", $product->getName()); 
         $this->spreadsheet->getActiveSheet()->setCellValue("B$row", $product->getBrand()); 
         $this->spreadsheet->getActiveSheet()->setCellValue("C$row", $product->getPrice()); 
+        $this->spreadsheet->getActiveSheet()->setCellValue("D$row", $product->getimgAddress()); 
         
         // Save the changes to the spreadsheet file 
         $writer = new Xlsx($this->spreadsheet); 
